@@ -20,6 +20,12 @@ public enum PersonSQLQueriesEnum {
         public String getQuery() {
             return "SELECT * FROM person WHERE NAME = ?";
         }
+    },
+    GET_PERSON_BY_AGE {
+        @Override
+        public String getQuery() {
+            return "SELECT * FROM person WHERE AGE = ?";
+        }
     };
 
     public abstract String getQuery ();

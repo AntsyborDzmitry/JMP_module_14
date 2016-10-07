@@ -4,12 +4,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Maven-task</groupId>
+    <parent>
+        <groupId>maven-task</groupId>
+        <artifactId>module_14</artifactId>
+        <version>${snapShotVersion}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <groupId>Maven-task-DB</groupId>
     <artifactId>DB_Module</artifactId>
     <packaging>jar</packaging>
     <version>${snapShotVersion}</version>
+
     <build>
         <finalName>${project.artifactId}</finalName>
+        <testSourceDirectory> src/test </testSourceDirectory>
     </build>
 
     <dependencies>
@@ -27,6 +36,11 @@
             <groupId>org.apache.derby</groupId>
             <artifactId>derbynet</artifactId>
             <version>10.10.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
